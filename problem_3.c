@@ -14,8 +14,8 @@ int check_prime (int x){
 
 
 
-int return_highest_prime_factor(int x){
-    for( int a = x-1; a < x; a = a - 1 ){
+int return_highest_prime_factor(long long x){
+    for( long long a = x-1; a < x; a = a - 1 ){
         if(x%a==0 && check_prime(a)){
             return a;
         }
@@ -25,8 +25,8 @@ int return_highest_prime_factor(int x){
 
 int main(){
 printf ("Checking primes...\n");
-int val =600851475143; 
-int largest = return_highest_prime_factor(val);
-printf("Largest prime factor of %i is %i\n", val, largest);
+long long val =600851475143LL; 
+long long largest = return_highest_prime_factor(val);
+printf("Largest prime factor is %llu\n", largest);
 return 0;
 }
